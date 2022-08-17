@@ -1,0 +1,23 @@
+---
+- name: Install and Configure NTP and Timezone 
+  hosts: ubuntu
+  vars:
+   ntp_server: [0.europe.pool.ntp.org, 1.europe.pool.ntp.org]
+  tasks:
+
+  - name: Install NTP
+    apt: name=ntp update-cache=yes
+
+  - name: Copy the ntp.conf template file
+    template: src=ntp.conf.j2 dest=/etc/ntp.conf
+    notify:
+      - restart ntp
+
+  - name: set timezone to Europe/Copenhagen
+    timezone:
+      name: Europe/Copenhagen
+
+  handlers:
+  - name: restart ntp
+    service: name=ntp state=restarted
+  become: yes
