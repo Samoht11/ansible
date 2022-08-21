@@ -25,7 +25,7 @@ titanic ansible_host=172.16.12.200
 
 
 [standalone]
-plexing ansible_host=172.16.10.203
+plexing ansible_host=172.16.12.203
 
 
 [ubuntu]
