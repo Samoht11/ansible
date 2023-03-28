@@ -39,6 +39,7 @@ titanic
 plexing
 ferry01
 db01
+manager
 
 # If you have multiple hosts following a pattern you can specify
 # them like this:
