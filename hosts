@@ -26,6 +26,7 @@ titanic ansible_host=172.16.12.200
 
 [standalone]
 plexing ansible_host=172.16.12.203
+manager ansible_host=172.16.10.251
 
 [webserver]
 ferry01 ansible_host=172.16.12.100
